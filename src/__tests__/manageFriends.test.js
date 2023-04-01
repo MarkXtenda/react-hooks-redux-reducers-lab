@@ -19,7 +19,7 @@ describe("manageFriends", () => {
     const action = { type: "Random Action Type" };
 
     const newState = manageFriends(state, action);
-
+    console.log(newState, "Random Action Type")
     expect(newState).toEqual({
       friends: [
         {
@@ -42,7 +42,7 @@ describe("manageFriends", () => {
     };
 
     const newState = manageFriends(state, action);
-
+    console.log(newState, "friends/add")
     expect(newState).toEqual({
       friends: [
         {
@@ -66,7 +66,7 @@ describe("manageFriends", () => {
     };
 
     const newState = manageFriends(state, action);
-
+    console.log(newState, "friends/remove")
     expect(newState).toEqual({
       friends: [],
     });
@@ -83,7 +83,7 @@ describe("manageFriends", () => {
     };
 
     const newState = manageFriends(state, action);
-
+    console.log(newState, "friends/add", "payload: ", state)
     expect(newState).not.toBe(state);
   });
 });
